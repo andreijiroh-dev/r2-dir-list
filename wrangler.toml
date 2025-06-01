@@ -1,0 +1,22 @@
+name = "r2-dirlist"
+main = "src/index.ts"
+compatibility_date = "2023-03-01"
+account_id = "cf0bd808c6a294fd8c4d8f6d2cdeca05"
+
+workers_dev = false
+routes = [
+    { pattern = "cdn.andreijiroh.dev/*", zone_name = "andreijiroh.dev" },
+    { pattern = "pub.r2.andreijiroh.dev/*", zone_name = "andreijiroh.dev" }
+]
+
+# Bind an R2 Bucket. Use R2 to store arbitrarily large blobs of data, such as files.
+# Docs: https://developers.cloudflare.com/r2/api/workers/workers-api-usage/
+r2_buckets  = [
+    { binding = "BUCKET_pub", bucket_name = "pubfiles"},
+    { binding = "BUCKET_projectArchives", bucket_name = "projects"}
+]
+
+[observability]
+# https://developers.cloudflare.com/workers/observability/logs/workers-logs/
+enabled = true
+head_sampling_rate = 1 # optional. default = 1.
