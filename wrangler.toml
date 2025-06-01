@@ -1,10 +1,15 @@
 "$schema" = "https://raw.githubusercontent.com/recaptimedev-labs/workers-config-schema/refs/heads/main/config-schema.json"
 name = "r2-dirlist"
 main = "src/index.ts"
-compatibility_date = "2023-03-01"
+compatibility_date = "2025-06-01"
 account_id = "cf0bd808c6a294fd8c4d8f6d2cdeca05"
 
+# disable both workers.dev and preview URLs since they only work on
+# custom domains for R2 buckets
 workers_dev = false
+preview_urls = false
+
+# Make sure this worker is routed proerly to the R2 buckets' custom domains.
 routes = [
     { pattern = "cdn.andreijiroh.dev/*", zone_name = "andreijiroh.dev" },
     { pattern = "projects.cdn.andreijiroh.dev/*", zone_name = "andreijiroh.dev" },
