@@ -1,3 +1,13 @@
+# R2 Directory Listing for `*.cdn.andreijiroh.dev` (and friends)
+
+| Bucket name on R2 | public URL | Description |
+| --- | --- | --- |
+| [`pubfiles`](https://cdn.andreijiroh.dev) | `cdn.andreijiroh.dev` | Generally |
+| [`projects`](https://projects.cdn.andreijiroh.dev) | `projects.andreijiroh.dev` | Collection of my non-code project files in one place. |
+
+---
+
+<id="original-readme">
 # R2 Directory Listing
 
 This is a simple Directory Listing script for [Cloudflare R2](https://developers.cloudflare.com/r2/) and hosted on [Cloudflare Workers](https://workers.cloudflare.com/). It is inspired by the [Directory Listing of Gitea downloads site](https://blog.gitea.com/evolution-of-the-gitea-downloads-site/).
